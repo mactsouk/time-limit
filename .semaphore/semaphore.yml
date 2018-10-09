@@ -19,7 +19,6 @@ blocks:
   - name: Building executable
     execution_time_limit:
       hours: 1
-      minutes: 10
     task:
       jobs:
       - name: Building job
