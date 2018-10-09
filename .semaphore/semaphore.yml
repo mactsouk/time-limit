@@ -4,27 +4,24 @@ agent:
   machine:
     type: e1-standard-2
     os_image: ubuntu1804
+execution_time_limit:
+  hours: 1
+  minutes: 30
 
 blocks:
   - name: Creating Docker Image
     task:
-      env_vars:
-        - name: APP_ENV
-          value: prod
       jobs:
       - name: Docker build
         commands:
           - checkout
-          - ls -1
-          - echo $APP_ENV
-          - echo "Docker build..."
-          - echo "done"
+          - sleep 3600
 
   - name: Building executable
     task:
       jobs:
-      - name: Smoke
+      - name: Building job
         commands:
           - checkout
-          - echo "make smoke"
+          - echo "Building executable"
 
