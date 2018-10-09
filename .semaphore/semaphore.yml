@@ -4,9 +4,6 @@ agent:
   machine:
     type: e1-standard-2
     os_image: ubuntu1804
-execution_time_limit:
-  hours: 5
-  minutes: 10
 
 blocks:
   - name: Creating Docker Image
@@ -20,10 +17,12 @@ blocks:
           - sleep 120
 
   - name: Building executable
+    execution_time_limit:
+      minutes: 10
     task:
       jobs:
       - name: Building job
         commands:
-          - checkout
+          - echo 360
           - echo "Building executable"
 
