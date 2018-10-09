@@ -5,8 +5,7 @@ agent:
     type: e1-standard-2
     os_image: ubuntu1804
 execution_time_limit:
-  hours: 1
-  minutes: 30
+  hours: 2
 
 blocks:
   - name: Creating Docker Image
