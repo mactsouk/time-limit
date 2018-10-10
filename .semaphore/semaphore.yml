@@ -14,7 +14,7 @@ blocks:
       - name: Docker build
         commands:
           - checkout
-          - sleep 120
+          - sleep 360
 
   - name: Building executable
     execution_time_limit:
